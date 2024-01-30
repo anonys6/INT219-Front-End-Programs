@@ -1,0 +1,33 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    background-color: fff;
+    border: 1px solid #777;
+}
+
+.red {
+    background-color: red;
+    color: #fff;
+}
+
+.yellow {
+    background-color: yellow;
+}
