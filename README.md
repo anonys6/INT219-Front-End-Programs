@@ -25,7 +25,7 @@ The repository is organized as follows:
     - `index.html`: HTML file with a table using `colspan` and `rowspan`.
     - `style.css`: CSS file for styling the table.
 
-- `index.html`: Main HTML file that links to all the other HTML files in the subdirectories.
+- `index.html`: Main HTML file that links to all the other HTML files in the subdirectories. You can view it [here](https://anonys6.github.io/INT219-Front-End-Programs/).
 
 ## Usage
 
