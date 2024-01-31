@@ -25,9 +25,11 @@ The repository is organized as follows:
     - `index.html`: HTML file with a table using `colspan` and `rowspan`.
     - `style.css`: CSS file for styling the table.
 
+- `index.html`: Main HTML file that links to all the other HTML files in the subdirectories.
+
 ## Usage
 
-To view the exercises, open the `index.html` file in each folder in a web browser.
+To view the exercises, open the `index.html` file in each folder in a web browser. You can also open the main `index.html` file to navigate to the other exercises.
 
 ## Contributing
 
