@@ -4,13 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/1fa877e563.js" crossorigin="anonymous"></script>
+
+
     <title>JavaScript Image Slideshow</title>
 
     <style>
         img {
             height: 100vh;
             width: 100%;
-            
+        }
+
+        #slideshow {
+            display: flex;
+            flex-direction: row;
+        }
+
+        i {
+            font-size: 2rem;
+            color: white;
+            background-color: rgb(219, 164, 164);
+            padding: 10px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -18,10 +35,10 @@
 <body>
     <!-- <h1>JavaScript Image Slideshow</h1> -->
     <div id="slideshow">
+        <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
         <img src="images/1.jpg" alt="Image 1">
+        <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
-    <button id="prev">Prev</button>
-    <button id="next">Next</button>
 
     <script>
         const images = [
@@ -35,23 +52,36 @@
         const prev = document.querySelector("#prev");
         const next = document.querySelector("#next");
         let index = 0;
+        let rotation = 0;
 
         setInterval(function () {
             index = (index + 1) % images.length;
             img.src = images[index];
-            img.sytle.cssText = "opacity: 0; transition: opacity 3s;";
-        }, 3000);
+            img.style.cssText = "opacity: 0; transition: opacity 3s;";
+        }, 5000);
 
         prev.addEventListener("click", function () {
             index = (index - 1 + images.length) % images.length;
             img.src = images[index];
+            rotation += 360;
+            img.style.cssText = `transform: rotate(${rotation}deg); transition: transform 1s;`;
+            img.style.cssText = "transform: scale(1.1); transition: transform 1s;";
+            setTimeout(() => {
+                img.style.cssText = "transform: scale(1); transition: transform 1s;";
+            }, 500);
+
         });
 
         next.addEventListener("click", function () {
             index = (index + 1) % images.length;
             img.src = images[index];
+            rotation -= 360;
+            img.style.cssText = `transform: rotate(${rotation}deg); transition: transform 1s;`;
+            img.style.cssText = "transform: scale(1.1); transition: transform 1s;";
+            setTimeout(() => {
+                img.style.cssText = "transform: scale(1); transition: transform 1s;";
+            }, 500);
         });
-
     </script>
 </body>
 
