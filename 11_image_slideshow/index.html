@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Image Slideshow</title>
+
+    <style>
+        img {
+            height: 100vh;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>JavaScript Image Slideshow</h1> -->
+    <div id="slideshow">
+        <img src="images/1.jpg" alt="Image 1">
+    </div>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+
+    <script>
+        const images = [
+            "images/1.jpg",
+            "images/2.jpg",
+            "images/3.jpg",
+            "images/4.jpg",
+            "images/5.jpg"
+        ];
+        const img = document.querySelector("#slideshow img");
+        const prev = document.querySelector("#prev");
+        const next = document.querySelector("#next");
+        let index = 0;
+
+        setInterval(function () {
+            index = (index + 1) % images.length;
+            img.src = images[index];
+            img.sytle.cssText = "opacity: 0; transition: opacity 3s;";
+        }, 3000);
+
+        prev.addEventListener("click", function () {
+            index = (index - 1 + images.length) % images.length;
+            img.src = images[index];
+        });
+
+        next.addEventListener("click", function () {
+            index = (index + 1) % images.length;
+            img.src = images[index];
+        });
+
+    </script>
+</body>
+
+</html>

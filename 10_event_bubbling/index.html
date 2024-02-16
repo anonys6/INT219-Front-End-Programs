@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Bubbling</title>
+
+    <style>
+        
+        #outer,
+        #middle,
+        #inner {
+            border: 20px solid black;
+            padding: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="outer">
+        <div id="middle">
+            <div id="inner">
+                <button id="btn">Click Me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const outer = document.getElementById('outer');
+        const middle = document.getElementById('middle');
+        const inner = document.getElementById('inner');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function() {
+            btn.style.backgroundColor = 'red';
+        });
+        
+        outer.addEventListener('click', function() {
+            setTimeout(() => {
+                outer.style.cssText = 'transform: rotate(90deg); transition: all ease .5s; border-color:red;';
+            }, 3000);
+        });
+
+        middle.addEventListener('click', function() {
+            setTimeout(() => {
+                middle.style.cssText = 'transform: rotate(180deg); transition: all ease .5s; border-color: green;';
+            }, 2000);
+        });
+
+        inner.addEventListener('click', function() {
+            setTimeout(() => {
+                inner.style.cssText = 'transform: rotate(360deg); transition: all ease .5s; border-color:blue;';
+                
+            }, 1000);
+        });
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
