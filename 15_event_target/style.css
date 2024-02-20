@@ -1,0 +1,40 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    padding: 0;
+    list-style: none;
+}
+
+#container-image {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+}
+
+img {
+    height: 60px;
+    width: 60px;
+}
+
+#main-image {
+    height: 300px;
+    width: 300px;
+}

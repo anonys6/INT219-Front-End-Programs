@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Factorial:</h1>
+
+    <input type="number" id="input-field" placeholder="Enter a number">
+    <button id="btn">Calculate</button>
+    <p id="result">Result: </p>
+
+    <script>
+        function factorial(n) {
+            // let result = BigInt(1);
+            // for (let i = BigInt(2); i <= BigInt(n); i++) {
+            //     result *= i;
+            // }
+            // return result;
+
+            if (n == 0) {
+                return 1;
+            } else {
+                return BigInt(n) * BigInt(factorial(BigInt(n) - BigInt(1)));
+            }
+        }
+
+        // let num = prompt('Enter a number to find its factorial: ');
+        const btn = document.getElementById('btn');
+        
+        btn.addEventListener("click", () => {
+            const input = document.getElementById("input-field").value;
+            // document.write(input);
+            let result = factorial(input);
+            document.getElementById("result").innerHTML = `The factorial of ${input} is ${result.toString()}`;
+        })
+        
+        // let result = factorial(num);
+        // document.write(`The factorial of ${num} is ${result.toString()}`);
+    </script>
+</body>
+
+</html>

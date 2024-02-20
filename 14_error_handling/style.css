@@ -1,0 +1,65 @@
+@keyframes colorChange {
+    0% {
+        background: blue;
+    }
+
+    50% {
+        background: pink;
+    }
+
+    100% {
+        background: blue;
+    }
+}
+
+@keyframes textColorChange {
+    0% {
+        color: green;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+body.error {
+    animation: colorChange 2s linear infinite;
+}
+
+#main-heading {
+    /* color: #778; */
+    animation: textColorChange 2s step-end infinite;
+}
+
+body,
+html {
+    background-color: #faebd7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+#container {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#demo {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+}
+
+#error {
+    color: red;
+}
