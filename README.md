@@ -25,6 +25,36 @@ The repository is organized as follows:
     - `index.html`: HTML file with a table using `colspan` and `rowspan`.
     - `style.css`: CSS file for styling the table.
 
+- `6_javaScript_basic/`: Basic JavaScript exercises.
+    - `index.html`: HTML file with JavaScript exercises.
+
+- `7_form_javaScript/`: Practice with JavaScript forms.
+    - `index.html`: HTML file with JavaScript forms.
+
+- `8_form_validation/`: Practice with form validation using JavaScript.
+    - `index.html`: HTML file with form validation.
+
+- `9_events_javaScript/`: Practice with JavaScript events.
+    - `index.html`: HTML file with JavaScript events.
+
+- `10_event_bubbling/`: Practice with event bubbling in JavaScript.
+    - `index.html`: HTML file with event bubbling.
+
+- `11_image_slideshow/`: Exercise to create an image slideshow using JavaScript.
+    - `index.html`: HTML file with image slideshow.
+
+- `12_timer_weekly/`: Exercise to create a weekly timer using JavaScript.
+    - `index.html`: HTML file with weekly timer.
+
+- `13_factorial/`: Exercise to calculate factorial using JavaScript.
+    - `index.html`: HTML file with factorial calculation.
+
+- `14_error_handling/`: Practice with error handling in JavaScript.
+    - `index.html`: HTML file with error handling.
+
+- `15_event_target/`: Practice with event targets in JavaScript.
+    - `index.html`: HTML file with event targets.
+
 - `index.html`: Main HTML file that links to all the other HTML files in the subdirectories. You can view it [here](https://anonys6.github.io/INT219-Front-End-Programs/).
 
 ## Usage
