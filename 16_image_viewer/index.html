@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Image Viewer</title>
+
+    <style>
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #97D9E1, #D9AFD9);
+            animation: gradient 15s ease infinite;
+            user-select: none;
+        }
+
+        #image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image {
+            flex: 0 0 20%;
+            margin: 10px;
+            border: 1px solid #000;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* MODAL STYLING */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="image-container">
+
+            <img src="https://source.unsplash.com/random/300x200" alt="Image 1" class="image">
+            <img src="https://source.unsplash.com/random/300x201" alt="Image 2" class="image">
+            <img src="https://source.unsplash.com/random/300x202" alt="Image 3" class="image">
+            <img src="https://source.unsplash.com/random/300x203" alt="Image 4" class="image">
+            <img src="https://source.unsplash.com/random/300x204" alt="Image 5" class="image">
+            <img src="https://source.unsplash.com/random/300x205" alt="Image 6" class="image">
+            <img src="https://source.unsplash.com/random/300x206" alt="Image 7" class="image">
+            <img src="https://source.unsplash.com/random/300x207" alt="Image 8" class="image">
+            <img src="https://source.unsplash.com/random/300x208" alt="Image 9" class="image">
+            <img src="https://source.unsplash.com/random/300x209" alt="Image 10" class="image">
+            <img src="https://source.unsplash.com/random/300x210" alt="Image 11" class="image">
+            <img src="https://source.unsplash.com/random/300x211" alt="Image 12" class="image">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.image');
+        const modal = document.getElementById('myModal');
+        const modalImg = document.getElementById('img01');
+        const span = document.getElementsByClassName('close')[0];
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                console.log(images);
+                modal.style.display = "block";
+                modalImg.src = image.src;
+            });
+        });
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

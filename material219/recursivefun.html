@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Recursive function</h1>
+    <script>
+        //         function recursion() {
+        //     // function code
+        //     recursion();
+        //     // function code
+        // }
+
+        // recursion();
+
+        // program to count down numbers to 1
+        function countDown(number) {
+
+            // display the number
+            document.write(number, "<br>");
+
+            // decrease the number value
+            const newNumber = number - 1;
+
+            // base case
+            if (newNumber > 0) {
+                countDown(newNumber);
+            }
+        }
+
+        countDown(4);
+    </script>
+
+</body>
+
+</html>
