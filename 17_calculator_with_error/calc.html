@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-
-    <style>
-
-    </style>
-</head>
+<html>
 
 <body>
 
-    <div id="hero">
-        <div id="container">
-            
-        </div>
-    </div>
-    
+    <h2>Arithmetic Operations</h2>
+
+    <label for="num1">Number 1:</label><br>
+    <input type="number" id="num1" name="num1"><br>
+    <label for="num2">Number 2:</label><br>
+    <input type="number" id="num2" name="num2"><br>
+    <label for="operation">Operation:</label><br>
+    <select id="operation" name="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+    </select><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.getElementById('operation').value;
+            let result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Division by zero is not allowed");
+                        return;
+                    }
+                    break;
+            }
+
+            document.getElementById('result').textContent = 'Result: ' + result;
+        }
+    </script>
+
 </body>
 
 </html>
