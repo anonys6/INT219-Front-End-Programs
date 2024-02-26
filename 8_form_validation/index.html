@@ -5,110 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Form Validation</title>
-
-
-    <!-- <style>
-        body,
-        html {
-            padding: 0;
+    <title>Simple Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             box-sizing: border-box;
         }
 
-        #container-form {
-            height: 100vh;
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        #form {
-            display: flex;
-            flex-direction: column;
-            height: 400px;
-            background-color: antiquewhite;
-            justify-content: center;
-            padding: 20px;
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
 
-        .form-control {
-            display: flex;
-            margin-bottom: 10px;
+        .error {
+            color: red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
-        .form-control input,
-        .form-control label {
-            width: 50%;
-
-        }
-    </style> -->
-
-    <link rel="stylesheet" href="style.css">
+    </style>
 </head>
 
 <body>
 
-    <div id="container-form">
+    <div class="container">
+        <h2>LPU Student</h2>
 
-        <form id="form">
-            <h2>LPU Student</h2>
+        <form onsubmit="return formValidation()">
+            <label for="name">Name</label>
+            <input type="text" id="n1" name="name" placeholder="Your name...">
+            <span id="errorname" class="error"></span>
 
-            <div class="form-control">
-                <label for="name">Name<sup>*</sup></label>
-                <input type="text" id="name" placeholder="Enter your name" required>
-                <small id="error-name"></small>
-            </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email...">
 
-            <div class="form-control">
-                <label for="email">Email<sup>*</sup></label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <small id="error-email"></small>
-            </div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something..." style="height: 100px;"></textarea>
 
-            <div class="form-control">
-                <label for="message">Message</label>
-                <textarea id="message" placeholder="Enter your message"></textarea>
-            </div>
+            <input type="submit" value="Submit">
 
-            <button type="submit" id="submit">Submit</button>
-
-
+            <script>
+                function formValidation() {
+                    let isValid = true
+                    if (document.getElementById("n1").value == "") {
+                        document.getElementById("errorname").innerHTML="name cannot be left blank"
+                        isValid = false
+                    }
+                    return isValid;
+                }
+            </script>
         </form>
-
     </div>
 
-
-    <script>
-        document.getElementById('form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const message = document.getElementById('message');
-
-            const errorName = document.getElementById('error-name');
-            const errorEmail = document.getElementById('error-email');
-
-            if (name.value.trim() === '') {
-                errorName.textContent = 'Name is required';
-            } else {
-                errorName.textContent = '';
-            }
-
-            if (email.value.trim() === '') {
-                errorEmail.textContent = 'Email is required';
-            } else if (!validateEmail(email.value)) {
-                errorEmail.textContent = 'Email is not valid';
-            } else {
-                errorEmail.textContent = '';
-            }
-
-            function validateEmail(email) {
-                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(String(email).toLowerCase());
-            }
-        });
-    </script>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
