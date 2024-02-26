@@ -11,7 +11,7 @@
 // //     alert("No name entered.");
 // // }
 
-// // arithemetic operators in javascript
+// // arithmetic operators in javascript
 // let x = 5;
 // let y = 2;
 
@@ -27,9 +27,6 @@
 
 // let num1 = prompt("Enter first operand:");
 // let num2 = prompt("Enter second operand:");
-
-// // let num1 = Number (prompt("Enter first operand:"));
-// // let num2 = Number (prompt("Enter second operand:"));
 
 // num1 = parseInt(num1);
 // num2 = parseInt(num2);
@@ -55,4 +52,4 @@ alert("Price before discount: " + totalPrice);
 
 alert("Average before discount: " + avgPrice);
 
-alert('After discount (using promocode "I got 5 on it"): ' + (totalPrice - 5));
+alert('After discount (using promo code: "I got 5 on it"): ' + (totalPrice - 5));
