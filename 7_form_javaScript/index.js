@@ -55,12 +55,10 @@
 // }
 
 
-
-
-// const num1El = doucment.getElementById('num1');
-// const num2El = doucment.getElementById('num2');
-// const buttonEl = doucment.getElementById('btn-check');
-// const paraEl = doucment.getElementById("result");
+// const num1El = document.getElementById('num1');
+// const num2El = document.getElementById('num2');
+// const buttonEl = document.getElementById('btn-check');
+// const paraEl = document.getElementById("result");
 
 // buttonEl.addEventListener('click', function (event) {
 //     event.preventDefault();
@@ -118,7 +116,7 @@ buttonEl.addEventListener('click', function (event) {
     event.preventDefault();
     const num = numEl.value;
 
-    for (let i = 1; i <= num; i++) {
+    for (let i = 1; i <= num ; i++) {
 
         if (i == 5 || i == 8) {
             continue;
