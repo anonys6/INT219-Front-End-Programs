@@ -18,14 +18,13 @@ html {
     height: 600px;;
     text-align: center;
 }
- */
+*/
 
 
 
 .container {
     display: flex;
     gap: 10px;
-
 }
 
 .items {
