@@ -2,8 +2,6 @@ const demoEle = document.getElementById('demo');
 const btnEle = document.getElementById('btn-start');
 const btnStop = document.getElementById('btn-stop');
 
-
-
 let intervalId;
 let countStart = 0;
 
