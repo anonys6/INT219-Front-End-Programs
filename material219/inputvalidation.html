@@ -82,18 +82,20 @@
             <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
 
             <input type="submit" value="Submit">
+
+
+
             <script>
                 function formvalidation() {
                     //let isValid = true
                     if (document.getElementById("n1").value == "") {
-                        //alert("This field is mandatory")
-                        //document.getElementById("errorname").innerHTML="name cannot be left blank"
-                        //isValid = false
+                        alert("This field is mandatory")
+                        document.getElementById("errorname").innerHTML="name cannot be left blank"
+                        isValid = false
                     }
-                    // return isValid;
-
+                    return isValid;
                 }
-
+                
             </script>
         </form>
     </div>

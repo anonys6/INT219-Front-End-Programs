@@ -13,17 +13,20 @@
             <!-- use onclick="event.stopPropagation()" to stop propagation -->
             <p id="p1" class="ele"></p>
 
-
-
         </div>
     </form>
+
+
+
     <script>
         p1.addEventListener("click", function () {
             this.style.borderColor = 'red';
         });
+
         main.addEventListener("click", function () {
             this.style.borderColor = 'green';
         });
+
         myform.addEventListener("click", function () {
             this.style.borderColor = 'blue';
         });
