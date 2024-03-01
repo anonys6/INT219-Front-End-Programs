@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+</head>
+
+<body>
+    <h1>jquery</h1>
+    <button id="btn">Click me</button>
+    <p id="para">This is a paragraph</p>
+
+
+    <p id="para-sir">this is another by sir</p>
+
+
+
+    <!-- Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- CDNJS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#para").hide();
+            });
+
+        });
+        
+        $(document).ready(function () {
+            $("#para-sir").css("font-size", "70px");
+            $("#para-sir").css("color", "red");
+        })
+
+    </script>
+
+</body>
+
+</html>
