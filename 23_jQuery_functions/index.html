@@ -41,7 +41,6 @@
 
         .container {
             background-color: rgba(255, 255, 255, 0.1);
-            /* Semi-transparent white */
             border-radius: 5px;
             padding: 20px;
             height: 300px;
@@ -53,10 +52,8 @@
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             flex: 1 1 350px;
 
-            /* Add these lines */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            /* For Safari */
         }
 
         img {
@@ -119,6 +116,7 @@
                 <button id="fade-out">Fade Out</button>
                 <button id="fade-toggle">Fade Toggle</button>
                 <button id="fate-to">Fade To</button>
+                <button id="scale">Scale</button>
             </div>
             <img src="https://www.picsum.photos/302/200" alt="Random Image" id="fade-image">
         </div>
@@ -169,6 +167,13 @@
             $("#fate-to").click(() => {
                 $("#fade-image").fadeTo(500, 0.5);
             })
+
+            $("#scale").click(() => {
+                $("#fade-image").animate({
+                    width: "toggle",
+                    height: "toggle"
+                });
+            });
 
         })
     </script>
