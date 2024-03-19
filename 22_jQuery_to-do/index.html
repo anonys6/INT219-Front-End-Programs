@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>jQuery To-Do List</title>
+
+    <style>
+        html,
+        body {
+            user-select: none;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #input {
+            width: 50%;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        #add {
+            display: block;
+            width: 52%;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: none;
+            background-color: #5C6BC0;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #add:hover {
+            background-color: #3949AB;
+        }
+
+        #list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 60%;
+            text-align: left;
+        }
+
+        #list li {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        #list li.completed {
+            text-decoration: line-through;
+            background-color: #C8E6C9;
+        }
+
+        .delete {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>To-Do List</h1>
+
+    <form id="form">
+        <input type="text" id="input" placeholder="Enter a task">
+        <button id="add" type="submit">Add</button>
+    </form>
+
+    <ul id="list">
+        <li>Breakfast<button class="delete">✖</button></li>
+        <li>Room cleaning<button class="delete">✖</button></li>
+        <li>Work<button class="delete">✖</button></li>
+    </ul>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#form").submit(function (event) {
+                event.preventDefault();
+
+                if ($("#input").val() == '') {
+                    alert('Please enter a task');
+                    return;
+                }
+                var task = $("#input").val();
+                var newItem = $("<li>" + task + "<button class='delete'>✖</button></li>");
+                newItem.hide();
+                $("#list").append(newItem);
+                newItem.show('slow');
+                $("#input").val('');
+            });
+
+            $(document).on('click', '#list li', function (event) {
+                if (!$(event.target).hasClass('delete')) {
+                    $(this).toggleClass('completed');
+                }
+            });
+
+            $(document).on('click', '.delete', function () {
+                $(this).parent().fadeOut(500, function () {
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

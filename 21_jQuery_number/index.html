@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").prepend("hello<br>");
+            });
+            $("#btn2").click(function () {
+                $("p").append("how are you<br>");
+            });
+        });
+    </script>
+
+    <style>
+        html,
+        body {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>LPU</h1>
+    <p>hey there</p>
+
+    <button id="btn1">Prepend</button>
+    <button id="btn2">Append</button>
+</body>
+
+</html>
