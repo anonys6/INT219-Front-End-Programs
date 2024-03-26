@@ -1,6 +1,6 @@
-# HTML and CSS Practice
+# HTML, CSS, and JavaScript Practice
 
-This repository contains practice exercises for HTML and CSS. Each folder represents a different topic or exercise.
+This repository contains practice exercises for HTML, CSS, and JavaScript. Each folder represents a different topic or exercise.
 
 ## Structure
 
@@ -17,7 +17,7 @@ The repository is organized as follows:
     - `index.html`: HTML file with various forms.
     - `style.css`: CSS file for styling the forms.
 
-- `4_tiime_table/`: Exercise to create a time table using HTML and CSS.
+- `4_time_table/`: Exercise to create a time table using HTML and CSS.
     - `index.html`: HTML file with a time table.
     - `style.css`: CSS file for styling the time table.
 
@@ -54,6 +54,39 @@ The repository is organized as follows:
 
 - `15_event_target/`: Practice with event targets in JavaScript.
     - `index.html`: HTML file with event targets.
+
+- `16_image_viewer/`: Exercise to create an image viewer using JavaScript.
+    - `index.html`: HTML file with image viewer.
+
+- `17_calculator_with_js/`: Exercise to create a calculator using JavaScript.
+    - `index.html`: HTML file with calculator.
+
+- `18_reverse_string/`: Exercise to reverse a string using JavaScript.
+    - `index.html`: HTML file with string reversal.
+
+- `19_jquery/`: Introduction to jQuery.
+    - `index.html`: HTML file with jQuery examples.
+
+- `20_jquery_div/`: Practice with jQuery and div elements.
+    - `index.html`: HTML file with jQuery and div examples.
+
+- `21_jquery_number/`: Practice with jQuery and number manipulation.
+    - `index.html`: HTML file with jQuery and number manipulation.
+
+- `22_jquery_to-do/`: Exercise to create a to-do list using jQuery.
+    - `index.html`: HTML file with to-do list.
+
+- `23_jQuery_functions/`: Practice with jQuery functions.
+    - `index.html`: HTML file with jQuery functions.
+
+- `24_JSON/`: Introduction to JSON.
+    - `index.html`: HTML file with JSON examples.
+
+- `25_bootstrap/`: Introduction to Bootstrap.
+    - `index.html`: HTML file with Bootstrap examples.
+
+- `26_portfolio_jQuery/`: Exercise to create a portfolio using jQuery.
+    - `index.html`: HTML file with portfolio.
 
 - `index.html`: Main HTML file that links to all the other HTML files in the subdirectories. You can view it [here](https://anonys6.github.io/INT219-Front-End-Programs/).
 
