@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Image Thumbnail</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8d7da;
+        }
+
+        .container {
+            background-color: #dfa0a5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-4 mt-2 rounded border border-light shadow-lg">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/400x400" class="card-img-top img-fluid rounded"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/400x401" class="card-img-top img-fluid rounded-circle"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/400x402" class="card-img-top img-fluid rounded"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/400x403" class="card-img-top img-fluid rounded-circle"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/401x400" class="card-img-top img-fluid rounded-circle"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/402x400" class="card-img-top img-fluid rounded"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/403x400" class="card-img-top img-fluid rounded-circle"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-2">
+                    <img src="https://source.unsplash.com/random/404x400" class="card-img-top img-fluid rounded"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Image 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <h6 class="dropdown-header">Dropdown header</h6>
+            <a class="dropdown-item" href="#">Item 1</a>
+            <a class="dropdown-item" href="#">Item 2</a>
+            <a class="dropdown-item" href="#">Item 3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Item 4</a>
+            <a class="dropdown-item" href="#">Item 5</a>
+            <a class="dropdown-item" href="#">Item 6</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Item 7</a>
+            <a class="dropdown-item" href="#">Item 8</a>
+            <a class="dropdown-item disabled" href="#">Disabled Item</a>
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-primary">
+            Item 1 <span class="badge badge-light float-right">New</span>
+        </li>
+        <li class="list-group-item list-group-item-secondary">
+            Item 2 <span class="badge badge-light float-right">Updated</span>
+        </li>
+        <li class="list-group-item list-group-item-success">
+            Item 3 <span class="badge badge-light float-right">Completed</span>
+        </li>
+        <li class="list-group-item list-group-item-danger">
+            Item 4 <span class="badge badge-light float-right">Urgent</span>
+        </li>
+        <li class="list-group-item list-group-item-warning">
+            Item 5 <span class="badge badge-light float-right">Pending</span>
+        </li>
+        <li class="list-group-item list-group-item-info">
+            Item 6 <span class="badge badge-light float-right">In Progress</span>
+        </li>
+        <li class="list-group-item list-group-item-light">
+            Item 7 <span class="badge badge-dark float-right">On Hold</span>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+            Item 8 <span class="badge badge-light float-right">Delayed</span>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
