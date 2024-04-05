@@ -1,0 +1,84 @@
+<script>
+    jQuery(document).ready(function ($) {
+        var imageCount = 0;
+
+        // Code for the first section
+        $('.mejocare-image-btn').click(function (event) {
+            event.preventDefault();
+            imageCount++;
+            var nextImage = $('.mejocare-image.mejocare-image-hidden').eq(0);
+            nextImage.hide().removeClass('mejocare-image-hidden').fadeIn();
+
+            if ($('.mejocare-image.mejocare-image-hidden').length == 0) {
+                $(this).hide();
+            }
+
+            if (imageCount > 0) {
+                $('.mejocare-image-btn-less').removeClass('mejocare-image-hidden');
+            }
+
+            $('html, body').animate({
+                scrollTop: nextImage.offset().top
+            }, 1000);
+        });
+
+        $('.mejocare-image-btn-less').click(function (event) {
+            event.preventDefault();
+            if (imageCount > 0) {
+                var lastImage = $('.mejocare-image:not(.mejocare-image-hidden)').last();
+                lastImage.fadeOut(function () {
+                    lastImage.addClass('mejocare-image-hidden');
+                    if ($('.mejocare-image.mejocare-image-hidden').length > 0) {
+                        $('.mejocare-image-btn').show();
+                    }
+                });
+                imageCount--;
+
+                if (imageCount == 0) {
+                    $(this).addClass('mejocare-image-hidden');
+                }
+            }
+        });
+
+        // Reset imageCount for the second section
+        imageCount = 0;
+
+        // Code for the second section
+        $('.mejo-web-btn-more').click(function (event) {
+            event.preventDefault();
+            imageCount++;
+            var nextImage = $('.mejo-web.mejo-web-hidden').eq(0);
+            nextImage.hide().removeClass('mejo-web-hidden').fadeIn();
+
+            if ($('.mejo-web.mejo-web-hidden').length == 0) {
+                $(this).hide();
+            }
+
+            if (imageCount > 0) {
+                $('.mejo-web-btn-less').removeClass('mejo-web-hidden');
+            }
+
+            $('html, body').animate({
+                scrollTop: nextImage.offset().top
+            }, 1000);
+        });
+
+        $('.mejo-web-btn-less').click(function (event) {
+            event.preventDefault();
+            if (imageCount > 0) {
+                var lastImage = $('.mejo-web:not(.mejo-web-hidden)').last();
+                lastImage.fadeOut(function () {
+                    lastImage.addClass('mejo-web-hidden');
+                    if ($('.mejo-web.mejo-web-hidden').length > 0) {
+                        $('.mejo-web-btn-more').show();
+                    }
+                });
+                imageCount--;
+
+                if (imageCount == 0) {
+                    $(this).addClass('mejo-web-hidden');
+                }
+            }
+        });
+    });
+</script>
