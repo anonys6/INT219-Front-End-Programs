@@ -9,5 +9,8 @@ import { RouterOutlet } from '@angular/router';
     styleUrl: './app.component.css'
 })
 export class AppComponent {
-    title = 'angular-basic';
+    // title = '31_angular_app';
+    title = "tanmaya";
+
+    subTitle = "Welcome to my page";
 }
