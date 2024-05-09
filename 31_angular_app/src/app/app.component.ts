@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NgFor } from '@angular/common';
+import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
@@ -13,4 +16,14 @@ export class AppComponent {
     title = "tanmaya";
 
     subTitle = "Welcome to my page";
+
+    images = [
+        'https://source.unsplash.com/random/800x600',
+        'https://source.unsplash.com/random/800x600',
+        'https://source.unsplash.com/random/800x600',
+        'https://source.unsplash.com/random/800x600',
+        'https://source.unsplash.com/random/800x600'
+    ];
+
+    
 }
